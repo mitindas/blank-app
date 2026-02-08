@@ -85,7 +85,7 @@ st.divider()
 st.subheader("Upload")
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None and st.button("Upload"):
-    new_id = uuid4().hex
+    new_id = uuid4().hex[:4]
     file_path = UPLOAD_DIR / new_id
     file_path.write_bytes(uploaded_file.getvalue())
     metadata[new_id] = {
