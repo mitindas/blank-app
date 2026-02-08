@@ -1,10 +1,8 @@
-# 🎈 Blank app template
+# Anonymous File Drop
 
-A simple Streamlit app template for you to modify!
+Upload a file without registration and receive a download link. Files are removed automatically after 96 hours.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
+### How to run it locally
 
 1. Install the requirements
 
@@ -17,3 +15,11 @@ A simple Streamlit app template for you to modify!
    ```
    $ streamlit run streamlit_app.py
    ```
+
+### Optional configuration
+
+If you want the app to show a full download URL (not just a `?file=...` link), set a base URL in Streamlit secrets:
+
+```
+BASE_URL = "https://your-app-domain.example"
+```
