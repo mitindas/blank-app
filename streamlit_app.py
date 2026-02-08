@@ -52,8 +52,8 @@ def get_query_file_id() -> str | None:
 def build_download_link(file_id: str) -> str:
     base_url = st.secrets.get("BASE_URL") or st.session_state.get("base_url")
     if base_url:
-        return f"{base_url.rstrip('/')}/?file={file_id}"
-    return f"?file={file_id}"
+        return f"{base_url.rstrip('/')}/{file_id}"
+    return f"{file_id}"
 
 
 st.set_page_config(page_title="Anonymous File Drop", page_icon=None)
